@@ -10,21 +10,34 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var loginWithFB: UIButton!
+    @IBOutlet weak var loginWithGLE: UIButton!
     override func viewDidLoad() {
+     
+        loginWithFB.layer.cornerRadius = 5
+        loginWithGLE.layer.cornerRadius = 5
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginWithFBTapped(_ sender: UIButton) {
     }
-    */
+    
 
+    @IBAction func loginWithGLETapped(_ sender: UIButton) {
+    }
+    @IBAction func loginWithMailTapped(_ sender: UIButton) {
+        
+        let signInVC = storyboard?.instantiateViewController(identifier: "SignInVC")
+        present(signInVC!, animated: true, completion: nil)
+        
+    }
+    @IBAction func registerButtonTapped(_ sender: UIButton) {
+        let signInVC = storyboard?.instantiateViewController(identifier: "SignInVC") as! SignInVC
+        signInVC.viaRegiter = true
+        present(signInVC, animated: true, completion: nil)
+        
+    }
 }

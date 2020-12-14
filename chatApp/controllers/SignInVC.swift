@@ -9,22 +9,64 @@
 import UIKit
 
 class SignInVC: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: CustomTextField!
+    
+    @IBOutlet weak var passwordTextField: CustomTextField!
+    @IBOutlet weak var signInLogInButton: UIButton!
+    
+    var viaRegiter:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if (viaRegiter){
+            signInLogInButton.setTitle("Register", for: .normal)
+        }
+    }
+    func alert(title:String , message:String , actionOK:Bool){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            if (actionOK){
+               self.dismiss(animated: true, completion: nil)
+            }
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func signInButtonPressed(_ sender: UIButton) {
+        
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        
+        if (signInLogInButton.titleLabel?.text == "Register"){
+            
+            AuthService.instance.registerUser(email: email!, password: password!) { (success, error) in
+                if (success){
+                    self.alert(title: "Success!", message: "Please login again!" , actionOK: true)
+                    
+                }else{
+                    self.alert(title: "Error!", message: "Check email/password" , actionOK: false)
+                }
+            }
+            
+        }else{
+            AuthService.instance.loginUser(email: email!, password: password!) { (success, error) in
+                if (success){
+                    self.dismiss(animated: true, completion: nil)
+                }else{
+                    self.alert(title: "Error!", message: "Check email/password" , actionOK: false)
+                    
+                }
+            }
+        }
     }
-    */
-
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
+

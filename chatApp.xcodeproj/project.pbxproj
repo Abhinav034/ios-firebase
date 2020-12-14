@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4471262625631365005EB0D4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4471262525631365005EB0D4 /* AuthService.swift */; };
 		44EF1F1025549D77008F01C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F0F25549D77008F01C3 /* AppDelegate.swift */; };
 		44EF1F1225549D77008F01C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F1125549D77008F01C3 /* SceneDelegate.swift */; };
-		44EF1F1425549D77008F01C3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F1325549D77008F01C3 /* FirstViewController.swift */; };
-		44EF1F1625549D77008F01C3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F1525549D77008F01C3 /* SecondViewController.swift */; };
+		44EF1F1425549D77008F01C3 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F1325549D77008F01C3 /* NewsVC.swift */; };
+		44EF1F1625549D77008F01C3 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F1525549D77008F01C3 /* GroupVC.swift */; };
 		44EF1F1925549D77008F01C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44EF1F1725549D77008F01C3 /* Main.storyboard */; };
 		44EF1F1B25549D78008F01C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44EF1F1A25549D78008F01C3 /* Assets.xcassets */; };
 		44EF1F1E25549D78008F01C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44EF1F1C25549D78008F01C3 /* LaunchScreen.storyboard */; };
@@ -19,15 +20,17 @@
 		44EF1F2C2554A62B008F01C3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F2B2554A62B008F01C3 /* LoginVC.swift */; };
 		44EF1F2E2554B06E008F01C3 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F2D2554B06E008F01C3 /* SignInVC.swift */; };
 		44EF1F312554B1DC008F01C3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F302554B1DC008F01C3 /* CustomTextField.swift */; };
+		44EF1F332554CD2E008F01C3 /* ViewShadowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF1F322554CD2E008F01C3 /* ViewShadowing.swift */; };
 		CE984668D7CFB3DD46CEB232 /* Pods_chatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1155BA8FB4A89199E4732C /* Pods_chatApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4471262525631365005EB0D4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		44EF1F0C25549D77008F01C3 /* chatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EF1F0F25549D77008F01C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44EF1F1125549D77008F01C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44EF1F1325549D77008F01C3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		44EF1F1525549D77008F01C3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		44EF1F1325549D77008F01C3 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		44EF1F1525549D77008F01C3 /* GroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVC.swift; sourceTree = "<group>"; };
 		44EF1F1825549D77008F01C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44EF1F1A25549D78008F01C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44EF1F1D25549D78008F01C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		44EF1F2B2554A62B008F01C3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		44EF1F2D2554B06E008F01C3 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		44EF1F302554B1DC008F01C3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		44EF1F322554CD2E008F01C3 /* ViewShadowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadowing.swift; sourceTree = "<group>"; };
 		789782C2527937F259CE88B5 /* Pods-chatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatApp.debug.xcconfig"; path = "Target Support Files/Pods-chatApp/Pods-chatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AB1155BA8FB4A89199E4732C /* Pods_chatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFF913CB5445EC730C57E39 /* Pods-chatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatApp.release.xcconfig"; path = "Target Support Files/Pods-chatApp/Pods-chatApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,8 +96,8 @@
 		44EF1F2525549D90008F01C3 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				44EF1F1325549D77008F01C3 /* FirstViewController.swift */,
-				44EF1F1525549D77008F01C3 /* SecondViewController.swift */,
+				44EF1F1325549D77008F01C3 /* NewsVC.swift */,
+				44EF1F1525549D77008F01C3 /* GroupVC.swift */,
 				44EF1F2B2554A62B008F01C3 /* LoginVC.swift */,
 				44EF1F2D2554B06E008F01C3 /* SignInVC.swift */,
 			);
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				44EF1F2925549FE5008F01C3 /* DataService.swift */,
+				4471262525631365005EB0D4 /* AuthService.swift */,
 			);
 			path = dataService;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				44EF1F302554B1DC008F01C3 /* CustomTextField.swift */,
+				44EF1F322554CD2E008F01C3 /* ViewShadowing.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -249,12 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44EF1F1625549D77008F01C3 /* SecondViewController.swift in Sources */,
-				44EF1F1425549D77008F01C3 /* FirstViewController.swift in Sources */,
+				44EF1F1625549D77008F01C3 /* GroupVC.swift in Sources */,
+				44EF1F332554CD2E008F01C3 /* ViewShadowing.swift in Sources */,
+				44EF1F1425549D77008F01C3 /* NewsVC.swift in Sources */,
 				44EF1F2C2554A62B008F01C3 /* LoginVC.swift in Sources */,
 				44EF1F1025549D77008F01C3 /* AppDelegate.swift in Sources */,
 				44EF1F312554B1DC008F01C3 /* CustomTextField.swift in Sources */,
 				44EF1F2E2554B06E008F01C3 /* SignInVC.swift in Sources */,
+				4471262625631365005EB0D4 /* AuthService.swift in Sources */,
 				44EF1F1225549D77008F01C3 /* SceneDelegate.swift in Sources */,
 				44EF1F2A25549FE5008F01C3 /* DataService.swift in Sources */,
 			);

@@ -55,7 +55,7 @@ class SignInVC: UIViewController {
             
             AuthService.instance.registerUser(email: email!, password: password!) { (success, error) in
                 if (success){
-                    self.alert(title: "Success!", message: "Please login again!" , actionOK: true)
+                    self.alert(title: "Success!", message: "Registeration successfull !" , actionOK: true)
                     
                 }else{
                     self.alert(title: "Error!", message: "Check email/password" , actionOK: false)

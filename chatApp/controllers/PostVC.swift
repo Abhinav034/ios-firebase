@@ -21,6 +21,8 @@ class PostVC: UIViewController {
         super.viewDidLoad()
         textView.delegate = self
         
+        userNameLabel.text = Auth.auth().currentUser?.email
+        userImageView.image = UIImage(named: "defaultProfileImage")
         
     }
     

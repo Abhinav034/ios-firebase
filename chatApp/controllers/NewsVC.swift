@@ -16,6 +16,8 @@ class NewsVC: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,8 +32,11 @@ class NewsVC: UIViewController , UITableViewDelegate , UITableViewDataSource {
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedCell
-        DataService.init().fetchEmailFromID(id: messages[indexPath.row].sender) { (data) in
-            cell.setValues(userImage: UIImage(named: "defaultProfileImage")!, id: data , message: self.messages[indexPath.row].content)
+        
+        DataService.init().fetchEmailFromID(id: messages[indexPath.row].sender) { (data) in     // here i am using my own function which converts raw id's to emails
+            
+            cell.setValues(userImage: UIImage(named: "defaultProfileImage")!, id: data , message:
+                self.messages[indexPath.row].content)
         }
        
         

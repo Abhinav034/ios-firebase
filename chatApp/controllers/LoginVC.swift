@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
+import Firebase
 class LoginVC: UIViewController {
 
     @IBOutlet weak var loginWithFB: UIButton!
     @IBOutlet weak var innerView: ViewShadowing!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginWithGLE: UIButton!
+    
+    
     override func viewDidLoad() {
      
         loginWithFB.layer.cornerRadius = 5
@@ -39,6 +41,12 @@ class LoginVC: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if (Auth.auth().currentUser != nil){
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
 
     @IBAction func loginWithFBTapped(_ sender: UIButton) {
     }
@@ -49,11 +57,13 @@ class LoginVC: UIViewController {
     @IBAction func loginWithMailTapped(_ sender: UIButton) {
         
         let signInVC = storyboard?.instantiateViewController(identifier: "SignInVC")
+        signInVC!.modalPresentationStyle = .fullScreen
         present(signInVC!, animated: true, completion: nil)
         
     }
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         let signInVC = storyboard?.instantiateViewController(identifier: "SignInVC") as! SignInVC
+        signInVC.modalPresentationStyle = .fullScreen
         signInVC.viaRegiter = true
         present(signInVC, animated: true, completion: nil)
         

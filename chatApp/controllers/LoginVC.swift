@@ -11,12 +11,30 @@ import UIKit
 class LoginVC: UIViewController {
 
     @IBOutlet weak var loginWithFB: UIButton!
+    @IBOutlet weak var innerView: ViewShadowing!
+    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginWithGLE: UIButton!
     override func viewDidLoad() {
      
         loginWithFB.layer.cornerRadius = 5
         loginWithGLE.layer.cornerRadius = 5
         super.viewDidLoad()
+        
+        // Code for dark or light mode
+        
+        
+        switch innerView.traitCollection.userInterfaceStyle{
+              case .dark:
+//                innerView.backgroundColor = .gray
+                  break
+              case .light:
+//                innerView.backgroundColor = .white
+//                registerButton.setTitleColor(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), for: .normal)
+                
+                  break
+              default:
+                  print("Do nothing")
+              }
 
         
     }

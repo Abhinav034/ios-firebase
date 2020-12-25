@@ -19,6 +19,16 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            
+            break
+        case .light:
+            break
+        default:
+            print("Do nothing")
+        }
+        
         if (viaRegiter){
             signInLogInButton.setTitle("Register", for: .normal)
         }
